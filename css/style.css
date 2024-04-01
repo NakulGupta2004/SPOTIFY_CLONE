@@ -17,9 +17,75 @@
 }
 /* this is for the footer section  */
 
-.footer-d{
+
+.footer-right-lower{
+    display: flex;
+    flex-direction: column;
+    
+        
+}
+
+.footer-right-lower-1{
+    border: 1px solid gray;
+}
+.footer-right-lower-2{
+    margin-top: 60px;
+    margin-left: 20px;
+    color: gray;
+}
+
+
+.footer-r-l-2{
+  
+    width: 210px;
+    margin: 262;
+    padding: 40px;
+    margin-left: 180px;
+    
+    
+}
+.footer-r-l-2 img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+.flex-li-2{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.footer-right-upper{
+    display: flex;
+
+
+}
+
+.footer-right{
+    display: flex;
+    width:77vwvw;
+    height: 400px;
+    flex-direction: column;
+    
+}
+.footer-r-l-1{
     display: flex;
     
+    gap: 75px;
+}
+.footer-r-l-1 li{
+    color: gray;
+    list-style-type: none;
+}
+.flex-li{
+    padding: 40px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.footer-r-l-1-1{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 body {
@@ -210,7 +276,7 @@ body {
 }
 
 .songList {
-    height: 544px;
+    height: 2855px;
     overflow: auto;
     margin-bottom: 44px;
 }
