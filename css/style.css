@@ -259,7 +259,8 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 30px;
+    right: 50px;
+    bottom: 76px;
     filter: invert(1);
     background: #e2d9d9;
     border-radius: 10px;
@@ -530,13 +531,13 @@ body {
 }
 .footer-hover{
     position: fixed;
-    top: 667px;
+    top: 700px;
     display: flex;
     /* border: 5px solid red; */
     gap: 105px;
     background: rgb(63,94,251);
 background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-height: 100px;
+height: 70px;
 align-items: center;
 width: 98vw;
 padding: 2px;
@@ -600,4 +601,8 @@ margin-left: 5px;
     width: 130px;
 }
 
+.songList{
+    height: 200px;
+    overflow: scroll;
+}
 
