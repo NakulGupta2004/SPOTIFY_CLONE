@@ -606,3 +606,8 @@ margin-left: 5px;
     overflow: scroll;
 }
 
+.circard{
+    /* border: 5px solid red; */
+    border-radius: 50%;
+    
+}
