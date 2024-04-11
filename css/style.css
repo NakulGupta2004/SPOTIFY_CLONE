@@ -96,6 +96,7 @@ body {
 .left {
     width: 20vw;
     padding: 10px;
+
 }
 
 .right {
@@ -397,12 +398,24 @@ body {
 }
 
 @media (max-width: 1200px) {
+    .footer-right{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .footer-hover{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     .left {
         position: absolute;
         left: -130%;
         transition: all .3s;
         z-index: 1;
-        width: 373px;
+        width: 300px;
         background-color: black;
         padding: 0;
         height: 100vh;
@@ -420,6 +433,7 @@ body {
         right: 31px;
         top: 25px;
         width: 29px;
+        z-index: 10;
     }
 
     .timevol {
@@ -481,6 +495,20 @@ body {
 }
 
 @media (max-width: 500px) {
+
+    .footer-right{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .footer-hover{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
     .card {
         width: 100%;
     }

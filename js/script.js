@@ -105,5 +105,16 @@ document.querySelector(".seekbar").addEventListener("click",e=>{
 document.querySelector(".circle").style.left=percent+"%";
 currentSong.currentTime= ((currentSong.duration)*percent)/100
 })
+
+//add an event listener for hamburger:
+document.querySelector(".hamburger").addEventListener("click",()=>{
+    document.querySelector(".left").style.left="0"
+    
+})
+//add an event listener for Close button:
+document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".left").style.left="-120%"
+    
+})
 }
 main()
