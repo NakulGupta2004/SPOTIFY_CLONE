@@ -1,9 +1,10 @@
 console.log("hello");
 let currentSong=new Audio();
+let songs;
 function secondsToMinutesSeconds(seconds) {
     // Calculate minutes and remaining seconds
     if(isNaN(seconds)||seconds<0){
-        return "Invalid input";
+        return "00:00";
     }
     const minutes=Math.floor(seconds/60);
     const remainingSeconds=Math.floor(seconds%60);
@@ -96,7 +97,7 @@ play.addEventListener("click",()=>{
 // Listen for time update event
 currentSong.addEventListener("timeupdate",()=>{
     console.log(currentSong.currentTime, currentSong.duration)
-    document.querySelector(".songtime").innerHTML=`${secondsToMinutesSeconds(currentSong.currentTime)}/${secondsToMinutesSeconds(currentSong.duration)}`
+    document.querySelector(".songtime").innerHTML=`${secondsToMinutesSeconds(currentSong.currentTime)} / ${secondsToMinutesSeconds(currentSong.duration)}`
     document.querySelector(".circle").style.left=(currentSong.currentTime/currentSong.duration)*100+"%"
 })
 // Add an event listener to seek bar
@@ -116,5 +117,37 @@ document.querySelector(".close").addEventListener("click",()=>{
     document.querySelector(".left").style.left="-120%"
     
 })
+// add an event listener
+
+    // Add an event listener to previous
+    previous.addEventListener("click", () => {
+        currentSong.pause()
+        console.log("Previous clicked")
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        if ((index - 1) >= 0) {
+            playMusic(songs[index - 1])
+        }
+    })
+
+    // Add an event listener to next
+    next.addEventListener("click", () => {
+        currentSong.pause()
+        console.log("Next clicked")
+
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        if ((index + 1) < songs.length) {
+            playMusic(songs[index + 1])
+        }
+    })
+
+        // Add an event to volume
+        document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
+            console.log("Setting volume to", e.target.value, "/ 100")
+            currentSong.volume = parseInt(e.target.value) / 100
+            if (currentSong.volume >0){
+                document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("mute.svg", "volume.svg")
+            }
+        })
+
 }
 main()
