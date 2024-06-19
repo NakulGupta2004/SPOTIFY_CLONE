@@ -261,7 +261,7 @@ body {
     align-items: center;
     position: fixed;
     right: 50px;
-    bottom: 76px;
+    bottom: 20px;
     filter: invert(1);
     background: #e2d9d9;
     border-radius: 10px;
